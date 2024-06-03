@@ -1,4 +1,4 @@
-// TODO: Include packages needed for this application
+// Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
@@ -10,7 +10,7 @@ global.optionGPL = 'Option 3: GPL 3.0';
 global.optionBSD = 'Option 4: BSD 3';
 global.optionNone = 'Option 5: None';
 
-// TODO: Create an array of questions for user input
+// Questions for user for the README.md file contents
 const questions = [
     {
         type: 'input',
@@ -65,33 +65,21 @@ const questions = [
     },
 ];
 
+// Ask the user the NINE questions to create the README.md file
 inquirer.prompt(questions)
 .then((response) => {
     const readmeContent = generateMarkdown(response);
-    
-    // console.log(`${response.githubName}`);
-    // console.log(`${response.emailAddress}`);
-    // console.log(`${response.projectName}`);
-    // console.log(`${response.projectDesc}`);
-    // console.log(`${response.license}`);
-    // console.log(`${response.install}`);
-    // console.log(`${response.tests}`);
-    // console.log(`${response.repo}`);
-    // console.log(`${response.contribute}`);
-
-    //console.log(`${readmeContent}`);
-
     writeToFile('README.md',readmeContent);
 
 });
 
-// TODO: Create a function to write README file
+// Function to write the README file
 function writeToFile(fileName, data) {
     fs.writeFile( 'README.md', data,
         err => err ? console.error(err) : console.log('The README.md file was Generated successfully!'));
 }
 
-// TODO: Create a function to initialize app
+// Function to initialize app
 function init() {}
 
 // Function call to initialize app

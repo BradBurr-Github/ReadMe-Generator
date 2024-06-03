@@ -73,21 +73,11 @@ function generateMarkdown(data) {
   const licenseSection = renderLicenseSection(data.license);
   const emailAddressLink = `<a href=mailto:${data.emailAddress}>${data.emailAddress}</a>`;
   const githubLink = `<a href=https://github.com/${data.githubName}>${data.githubName}</a>`;
-    // console.log(`${response.emailAddress}`);
-    // console.log(`${response.projectName}`);
-    // console.log(`${response.projectDesc}`);
-    // console.log(`${response.license}`);
-    // console.log(`${response.install}`);
-    // console.log(`${response.tests}`);
-    // console.log(`${response.repo}`);
-    // console.log(`${response.contribute}`);
-
-
-
-  return  `# README File Generator\r\n` +
+  // Markdown content
+  return  `# ${data.projectName}\r\n` +
           `${licenseBadge}\r\n` + 
           `## Description\r\n` +
-          `README File Generator: An application that creates a Professional README.md file.\r\n` +
+          `${data.projectDesc}\r\n` +
           `## Table of Contents\r\n` +
           `1. [Installation](#installation)\r\n` +
           `2. [Usage](#usage)\r\n` +
@@ -97,16 +87,16 @@ function generateMarkdown(data) {
           `6. [Questions](#questions)\r\n` +
           `7. [Acknowledgements](#acknowledgements)\r\n` +
           `## Installation\r\n` +
-          `Step-by-step instructions on how to get the development environment running.\r\n` +
+          `${data.install}\r\n` +
           `## Usage\r\n` +
-          `Usage info\r\n` +
-          `${licenseSection}` +
+          `${data.repo}\r\n` +
+          `${licenseSection}\r\n` +
           `## Contributing\r\n` +
-          `Contributing info\r\n` +
+          `${data.contribute}\r\n` +
           `## Tests\r\n` +
-          `Tests Info\r\n` +
+          `${data.tests}\r\n` +
           `## Questions\r\n` +
-          `If you have any questions about this Project or its Repository, I can be reached at ${emailAddressLink}.\r\n` +
+          `If you have any questions about this Project or its Repository, I can be reached at ${emailAddressLink}.  ` +
           `You can also find more of my work at ${githubLink}.\r\n` +
           `## Acknowledgements\r\n` +
           `None at this time.`;
