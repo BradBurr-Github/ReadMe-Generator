@@ -67,32 +67,8 @@ const questions = [
 
 inquirer.prompt(questions)
 .then((response) => {
-    //const readmeContent = generateMarkdown(response);
-
-    const licenseBadge = `[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`;
-
-    const readmeContent = 
-
-        `# README File Generator
-
-        README File Generator: An application that creates a Professional README.md file.
-
-        ## Description
-
-        This application asks the user specific questions on the command line and then builds a Professional README.md file from the answers given.
-
-        ## Image of My Website
-
-        <img src="./assets/images/webpage.png" alt="SkyCast webpage image"/>
-        
-        ## Visit My Website
-        
-        [My Website](https://bradburr-github.github.io/Sky-Cast/)
-  
-        ${licenseBadge}
-
-        `;
-
+    const readmeContent = generateMarkdown(response);
+    
     // console.log(`${response.githubName}`);
     // console.log(`${response.emailAddress}`);
     // console.log(`${response.projectName}`);
@@ -103,15 +79,15 @@ inquirer.prompt(questions)
     // console.log(`${response.repo}`);
     // console.log(`${response.contribute}`);
 
-    console.log(`${readmeContent}`);
+    //console.log(`${readmeContent}`);
 
-    writeToFile('README.md',readmeContent);
+    //writeToFile('README.md','test');
 
 });
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile( 'README.md', '',
+    fs.writeFile( 'README.md', data,
         err => err ? console.error(err) : console.log('The README.md file was Generated successfully!'));
 }
 
