@@ -3,7 +3,7 @@
 ## Description
 This application asks the user specific questions on the command line and then builds a Professional README.md file from the answers given.
 ## Link To My Project Video
-Please click <a href=https://drive.google.com/file/d/1MTXqbD7-ESGvYcg8O60zjwItA-x8pTDB/view?usp=drive_link>here</a> to watch the video demonstration of this Project.
+Please click <a href="https://drive.google.com/file/d/1MTXqbD7-ESGvYcg8O60zjwItA-x8pTDB/view?usp=drive_link">here</a> to watch the video demonstration of this Project.
 ## Table of Contents
 1. [Installation](#installation)
 2. [Usage](#usage)
