@@ -41,7 +41,7 @@ function renderLicenseLink(license) {
 // Function to render the license text
 function renderLicenseText(license) {
   // return license text
-  const licenseText = 'This project is licensed under the ';
+  let licenseText = 'This project is licensed under the ';
   if( license === global.optionMIT )
     licenseText += 'MIT license.';
   else if( license === global.optionAPACHE ) {
@@ -70,10 +70,24 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   // Create Markdown content and return it
   const licenseBadge = renderLicenseBadge(data.license);
+  const licenseSection = renderLicenseSection(data.license);
+  const emailAddressLink = `<a href=mailto:${data.emailAddress}>${data.emailAddress}</a>`;
+  const githubLink = `<a href=https://github.com/${data.githubName}>${data.githubName}</a>`;
+    // console.log(`${response.emailAddress}`);
+    // console.log(`${response.projectName}`);
+    // console.log(`${response.projectDesc}`);
+    // console.log(`${response.license}`);
+    // console.log(`${response.install}`);
+    // console.log(`${response.tests}`);
+    // console.log(`${response.repo}`);
+    // console.log(`${response.contribute}`);
+
+
+
   return  `# README File Generator\r\n` +
           `${licenseBadge}\r\n` + 
           `## Description\r\n` +
-          `README File Generator: An application that creates a Professional README.md file.` +
+          `README File Generator: An application that creates a Professional README.md file.\r\n` +
           `## Table of Contents\r\n` +
           `1. [Installation](#installation)\r\n` +
           `2. [Usage](#usage)\r\n` +
@@ -86,16 +100,16 @@ function generateMarkdown(data) {
           `Step-by-step instructions on how to get the development environment running.\r\n` +
           `## Usage\r\n` +
           `Usage info\r\n` +
-          `## License\r\n` +
-          `License info\r\n` +
+          `${licenseSection}` +
           `## Contributing\r\n` +
           `Contributing info\r\n` +
           `## Tests\r\n` +
           `Tests Info\r\n` +
           `## Questions\r\n` +
-          `Questions info\r\n` +
+          `If you have any questions about this Project or its Repository, I can be reached at ${emailAddressLink}.\r\n` +
+          `You can also find more of my work at ${githubLink}.\r\n` +
           `## Acknowledgements\r\n` +
-          `Acknowledgements info`;
+          `None at this time.`;
 }
 
 module.exports = generateMarkdown;

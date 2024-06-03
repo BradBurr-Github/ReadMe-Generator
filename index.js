@@ -15,12 +15,12 @@ const questions = [
     {
         type: 'input',
         name: 'githubName',
-        message: 'What is your GitHub username?',
+        message: 'What is your GitHub username?', default: 'BradBurr-Github'
     },
     {
         type: 'input',
         name: 'emailAddress',
-        message: 'What is your email address?',
+        message: 'What is your email address?', default: 'brabur@yahoo.com'
     },
     {
         type: 'input',
@@ -61,7 +61,7 @@ const questions = [
     {
         type: 'input',
         name: 'contribute',
-        message: 'What does the user need to know about contributing to the repo?',
+        message: 'What does the user need to know about contributing to the repo?', default: 'Please email me to contribute.'
     },
 ];
 
