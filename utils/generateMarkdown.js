@@ -14,7 +14,7 @@ function renderLicenseSection(license) {}
 function generateMarkdown(data) {
 
 
-console.log(`${githubName}`);
+console.log(`${data}`);
 
   
 //  return `# ${data.title}
