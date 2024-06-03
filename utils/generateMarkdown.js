@@ -63,37 +63,39 @@ function renderLicenseText(license) {
 function renderLicenseSection(license) {
   // return license section
   const licenseText = renderLicenseText(license);
-  return `## License<br/>${licenseText}`
+  return `## License\r\n${licenseText}`
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-
-
-  return 'test';
-
-  // const licenseBadge = renderLicenseBadge(data.license);
-  // const licenseSection = renderLicenseSection(data.license);
-  
-
-  // return `# README File Generator
-
-  // README File Generator: An application that creates a Professional README.md file.
-
-  // ## Description
-
-  // This application asks the user specific questions on the command line and then builds a Professional README.md file from the answers given.
-
-  // ## Image of My Website
-
-  // <img src="./assets/images/webpage.png" alt="SkyCast webpage image"/>
- 
-  // ## Visit My Website
- 
-  // [My Website](https://bradburr-github.github.io/Sky-Cast/)
-  
-  // ${licenseBadge}
-  // `;
+  // Create Markdown content and return it
+  const licenseBadge = renderLicenseBadge(data.license);
+  return  `# README File Generator\r\n` +
+          `${licenseBadge}\r\n` + 
+          `## Description\r\n` +
+          `README File Generator: An application that creates a Professional README.md file.` +
+          `## Table of Contents\r\n` +
+          `1. [Installation](#installation)\r\n` +
+          `2. [Usage](#usage)\r\n` +
+          `3. [License](#license)\r\n` +
+          `4. [Contributing](#contributing)\r\n` +
+          `5. [Tests](#tests)\r\n` +
+          `6. [Questions](#questions)\r\n` +
+          `7. [Acknowledgements](#acknowledgements)\r\n` +
+          `## Installation\r\n` +
+          `Step-by-step instructions on how to get the development environment running.\r\n` +
+          `## Usage\r\n` +
+          `Usage info\r\n` +
+          `## License\r\n` +
+          `License info\r\n` +
+          `## Contributing\r\n` +
+          `Contributing info\r\n` +
+          `## Tests\r\n` +
+          `Tests Info\r\n` +
+          `## Questions\r\n` +
+          `Questions info\r\n` +
+          `## Acknowledgements\r\n` +
+          `Acknowledgements info`;
 }
 
 module.exports = generateMarkdown;

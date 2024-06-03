@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-const {generateMarkdown} = require('./utils/generateMarkdown.js');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // Global Strings for 5 License options (circle, square or triangle)
 global.optionMIT = 'Option 1: MIT';
@@ -81,7 +81,7 @@ inquirer.prompt(questions)
 
     //console.log(`${readmeContent}`);
 
-    //writeToFile('README.md','test');
+    writeToFile('README.md',readmeContent);
 
 });
 
