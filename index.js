@@ -67,7 +67,31 @@ const questions = [
 
 inquirer.prompt(questions)
 .then((response) => {
-    generateMarkdown(response);
+    //const readmeContent = generateMarkdown(response);
+
+    const licenseBadge = `[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)`;
+
+    const readmeContent = 
+
+        `# README File Generator
+
+        README File Generator: An application that creates a Professional README.md file.
+
+        ## Description
+
+        This application asks the user specific questions on the command line and then builds a Professional README.md file from the answers given.
+
+        ## Image of My Website
+
+        <img src="./assets/images/webpage.png" alt="SkyCast webpage image"/>
+        
+        ## Visit My Website
+        
+        [My Website](https://bradburr-github.github.io/Sky-Cast/)
+  
+        ${licenseBadge}
+
+        `;
 
     // console.log(`${response.githubName}`);
     // console.log(`${response.emailAddress}`);
@@ -78,6 +102,10 @@ inquirer.prompt(questions)
     // console.log(`${response.tests}`);
     // console.log(`${response.repo}`);
     // console.log(`${response.contribute}`);
+
+    console.log(`${readmeContent}`);
+
+    writeToFile('README.md',readmeContent);
 
 });
 
