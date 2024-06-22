@@ -86,18 +86,25 @@ function generateMarkdown(data) {
           `5. [Tests](#tests)\r\n` +
           `6. [Questions](#questions)\r\n` +
           `7. [Acknowledgements](#acknowledgements)\r\n` +
+          `<a id="installation"></a>\r\n` +
           `## Installation\r\n` +
           `${data.install}\r\n` +
+          `<a id="usage"></a>\r\n` +
           `## Usage\r\n` +
           `${data.repo}\r\n` +
+          `<a id="license"></a>\r\n` +
           `${licenseSection}\r\n` +
+          `<a id="contributing"></a>\r\n` +
           `## Contributing\r\n` +
           `${data.contribute}\r\n` +
+          `<a id="tests"></a>\r\n` +
           `## Tests\r\n` +
           `${data.tests}\r\n` +
+          `<a id="questions"></a>\r\n` +
           `## Questions\r\n` +
           `If you have any questions about this Project or its Repository, I can be reached at ${emailAddressLink}.  ` +
           `You can also find more of my work at ${githubLink}.\r\n` +
+          `<a id="acknowledgements"></a>\r\n` +
           `## Acknowledgements\r\n` +
           `None at this time.`;
 }
