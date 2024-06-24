@@ -1,7 +1,7 @@
 # asdfasdf
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 ## Description
-asdfqwfqwef
+asdfasdfasdf
 ## Table of Contents
 1. [Installation](#installation)
 2. [Usage](#usage)
@@ -15,19 +15,19 @@ asdfqwfqwef
 npm install
 <a id="usage"></a>
 ## Usage
-asdf	234rf
+asdfasdf
 <a id="license"></a>
 ## License
-This project is licensed under the Apache 2.0 license.
+This project is licensed under the GNU GPL v3 license.
 <a id="contributing"></a>
 ## Contributing
-af234rf
+asdfasdf
 <a id="tests"></a>
 ## Tests
 npm run test
 <a id="questions"></a>
 ## Questions
-If you have any questions about this Project or its Repository, I can be reached at <a href=mailto:brabur@yahoo.com>brabur@yahoo.com</a>.  You can also find more of my work at <a href=https://github.com/BradBurr-Github>BradBurr-Github</a>.
+If you have any questions about this Project or its Repository, I can be reached at <a href=mailto:brabur@yahoo.com>brabur@yahoo.com</a>.  You can also find more of my work at <a href="https://github.com/BradBurr-Github" target="_blank">BradBurr-Github</a>.
 <a id="acknowledgements"></a>
 ## Acknowledgements
 None at this time.

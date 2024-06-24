@@ -72,7 +72,7 @@ function generateMarkdown(data) {
   const licenseBadge = renderLicenseBadge(data.license);
   const licenseSection = renderLicenseSection(data.license);
   const emailAddressLink = `<a href=mailto:${data.emailAddress}>${data.emailAddress}</a>`;
-  const githubLink = `<a href=https://github.com/${data.githubName}>${data.githubName}</a>`;
+  const githubLink = `<a href="https://github.com/${data.githubName}" target="_blank">${data.githubName}</a>`;
   // Markdown content
   return  `# ${data.projectName}\r\n` +
           `${licenseBadge}\r\n` + 
